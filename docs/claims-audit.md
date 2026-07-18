@@ -28,8 +28,10 @@ Audit date: July 18, 2026. “Public observation” means visible on the client�
 | Delivery turnaround / 24-hour design | No service-level evidence | Removed | Publish only after operational approval |
 | Installation service | Not verified | Not claimed | Confirm service area, provider and terms before adding |
 | CARB2 or other certification | Documentary proof not supplied | Not claimed | Supplier certificate plus applicable SKU scope required |
-| Coupon interaction | Local simulator | Code is not advertised; total updates locally | Replace with WooCommerce coupon engine |
-| Payment success / declined state | Local simulator | Explicitly labeled; no charge | Replace with approved gateway and webhook/order-state testing |
+| Coupon interaction | Local interface behavior | Code is not advertised; total updates only in the browser | Replace with WooCommerce coupon validation and totals |
+| Shipping ZIP check | No connected rate engine | Saves a valid ZIP and states that final methods/costs are confirmed during checkout | Replace with approved zones, classes, methods and live rate results |
+| Payment success / declined state | Local deterministic test behavior | Customer UI uses neutral validation/confirmation language; test numbers and integration limits are documented, not promoted publicly | Replace with an approved sandbox gateway and webhook/order-state testing |
+| Fresh cart state | Local browser storage | Starts empty and changes only after an explicit Add to Cart action | Replace with the WooCommerce session/cart APIs |
 
 ## Removed presentation content
 

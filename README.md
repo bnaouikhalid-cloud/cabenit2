@@ -45,6 +45,7 @@ See [`docs/content-verification.md`](docs/content-verification.md), [`docs/claim
 ## Documentation
 
 - [`docs/current-site-audit.md`](docs/current-site-audit.md)
+- [`docs/final-live-audit.md`](docs/final-live-audit.md)
 - [`docs/design-system.md`](docs/design-system.md)
 - [`docs/figma-handoff.md`](docs/figma-handoff.md)
 - [`docs/wordpress-implementation.md`](docs/wordpress-implementation.md)

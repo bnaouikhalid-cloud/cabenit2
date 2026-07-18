@@ -6,8 +6,8 @@ Audit date: July 18, 2026. This is a static-file and browser-behavior assessment
 
 | Asset | Uncompressed size |
 |---|---:|
-| Shared CSS | 89.6 KB |
-| Shared JavaScript | 40.3 KB |
+| Shared CSS | 89.9 KB |
+| Shared JavaScript | 40.9 KB |
 | Manrope WOFF2 | 24.3 KB |
 | Source Serif 4 WOFF2 | 50.3 KB |
 | Official 300px logo PNG | 53.8 KB |
@@ -16,7 +16,23 @@ Audit date: July 18, 2026. This is a static-file and browser-behavior assessment
 | Mobile hero derivative | 27.4 KB |
 | Product WebP files | 1.4–6.5 KB each |
 
-HTML pages range from roughly 10–25 KB uncompressed. Server compression is expected to reduce HTML/CSS/JS transfer further.
+Primary HTML pages range from 10.5–25.8 KB uncompressed. Server compression is expected to reduce HTML/CSS/JS transfer further.
+
+## Executed local browser transfer profile
+
+These figures come from the final Chromium resource-timing run at 1440px with cache disabled. They are local HTTP transfer totals, not GTmetrix or field Core Web Vitals.
+
+| Route | Browser transfer | Decoded total |
+|---|---:|---:|
+| Home | 327.3 KB | 323.8 KB |
+| Category | 275.9 KB | 272.1 KB |
+| Product | 321.4 KB | 318.2 KB |
+| Free Quote | 282.0 KB | 279.9 KB |
+| Cart | 227.6 KB | 225.2 KB |
+| Checkout | 222.6 KB | 220.9 KB |
+| Resources | 274.2 KB | 272.4 KB |
+
+The shared stylesheet was the largest transferred resource at about 90.2 KB including response overhead. The official 300px PNG logo followed at about 54.1 KB. Pages using the editorial font transferred its 50.6 KB WOFF2 file; shared JavaScript was about 41.2 KB. The Home browser selected the 800px responsive hero derivative at about 27.7 KB rather than the 1600px source.
 
 ## Implemented controls
 

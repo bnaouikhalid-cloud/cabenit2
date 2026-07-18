@@ -1,6 +1,8 @@
 # SEO preservation and migration checklist
 
-No SEO settings were changed. The public audit found common WordPress/SEO sitemap paths returning 404; the actual configuration requires authenticated review.
+No client WordPress SEO settings were changed. The standalone Vercel concept now includes unique titles/descriptions, concept-URL canonicals, Open Graph/social-image metadata, Organization/Product/Breadcrumb JSON-LD without Offer/Review claims, page-level `noindex,nofollow,noarchive`, a blocking `robots.txt` and a Vercel `X-Robots-Tag`. The public client-site audit found common WordPress/SEO sitemap paths returning 404; the actual configuration requires authenticated review.
+
+The concept must remain noindex. During a real WordPress implementation, replace concept canonicals with approved production canonicals and remove noindex only from the verified live WordPress hostname after redirects, schema, robots and sitemap pass the prelaunch comparison. Do not remove noindex from the Vercel concept alias.
 
 ## Baseline export—before staging work
 
@@ -68,4 +70,3 @@ No SEO settings were changed. The public audit found common WordPress/SEO sitema
 - [ ] Crawl immediately for 404/5xx, redirect chains, canonicals and blocked assets.
 - [ ] Monitor Search Console, server logs, indexed counts, rankings and conversion landing pages daily for the first week, then weekly for a month.
 - [ ] Keep rollback available; never restore an old database over new orders.
-

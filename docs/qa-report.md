@@ -1,30 +1,34 @@
 # QA report
 
-Executed: July 18, 2026 using local Chromium against `http://127.0.0.1:4173/`, followed by the same suite in a fresh private Chromium profile against the public Vercel production alias.
+Executed: July 18, 2026 using local Chromium against `http://127.0.0.1:4173/`. Final production execution is recorded after deployment.
 
 ## Result
 
-**Local: 70 passed · 0 failed. Public Vercel: 72 passed · 0 failed.** The public pass also verifies that default presentation mode hides the preview notice and `?review=1` shows a dismissible compact notice. Machine-readable evidence is in [`qa-browser-results.json`](qa-browser-results.json) and [`qa-live-results.json`](qa-live-results.json). The browser harness is [`../_cdp-test.cjs`](../_cdp-test.cjs).
+**Local: 103 passed · 0 failed. Public Vercel final: pending deployment.** Machine-readable evidence is in [`qa-browser-results.json`](qa-browser-results.json) and [`qa-live-results.json`](qa-live-results.json). The browser harness is [`../_cdp-test.cjs`](../_cdp-test.cjs).
 
 ## Executed coverage
 
 | Area | Result | Evidence |
 |---|---|---|
-| Six mandatory routes | Pass | Correct title/H1 and successful render on every route |
-| Responsive widths | Pass | Home, Category, Product, Free Quote, Cart and Checkout at 360, 390, 430, 768, 1024, 1280, 1440 and 1920px |
+| Six mandatory routes + Resources | Pass | Correct title/H1 and successful render on every route |
+| Responsive widths | Pass | Home, Category, Product, Free Quote, Cart, Checkout and Resources at 360, 390, 430, 768, 1024, 1280, 1440 and 1920px |
 | Horizontal overflow | Pass | Document scroll width never exceeded viewport width |
 | Images | Pass | All rendered images completed with a non-zero natural width |
 | Internal links/fragments | Pass | Every local link on all six routes fetched successfully and every referenced fragment existed |
-| Mobile navigation | Pass | Opens, closes and synchronizes `aria-expanded`/`aria-hidden` |
-| Search | Pass | Product filtering, two pantry results, Arrow-key selection and no-results state |
+| Mobile navigation | Pass | Opens/closes, synchronized ARIA, focus trap, Escape and focus restoration |
+| Search | Pass | Product filtering, pantry results, Arrow-key selection, no-results and explicit clear action |
 | Category | Pass | URL type filter, product count, price sort, active grid and Quick View |
 | Mobile filters | Pass | Drawer opens/applies/closes and shows matching total |
 | Product | Pass | Mobile “Choose a size” guard, exact variation price/SKU, enabled Add to Cart and persistent count |
 | Cart | Pass | Quantity, coupon result, delivery-availability check, remove and undo |
-| Quote | Pass | Local draft, selected PDF state, four-step validation, duplicate guard and `TC-PREVIEW` success ID |
+| Quote | Pass | Local draft, selected PDF state, four-step validation, duplicate guard and `TC-DESIGN` success ID |
 | Checkout | Pass | Collapsible mobile summary, associated required-field errors and error-step state |
-| Payment failure | Pass | Number ending `0002` shows declined simulator state with no charge |
-| Payment success | Pass | `4242…` produces local confirmation, `TC-PREVIEW` ID and clears cart |
+| Payment failure | Pass | Number ending `0002` shows an accessible authorization error |
+| Payment success | Pass | `4242…` produces the deterministic confirmation state, `TC-ORDER` ID and clears cart |
+| SEO/DOM | Pass | Canonical, description, noindex, Open Graph, unique IDs, named buttons, labeled controls and prohibited-language scan |
+| Browser history/refresh | Pass | Back/Forward preserves routes; nested Product refresh retains HTML, CSS and JavaScript |
+| Touch/motion | Pass | Sampled primary mobile targets are at least 44px; reduced-motion mode suppresses smooth transitions |
+| Transfer profile | Pass | Cache-disabled local totals recorded for all seven customer routes |
 | Network/404 | Pass | No failed image, CSS, JS, font or page requests during the run |
 | Console | Pass | No runtime exceptions or console errors |
 

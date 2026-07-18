@@ -1,6 +1,6 @@
 {
-  "executedAt": "2026-07-18T02:13:48.234Z",
-  "base": "https://temima-cabinets-premium-concept.vercel.app",
+  "executedAt": "2026-07-18T16:42:32.659Z",
+  "base": "https://cabenit01.vercel.app",
   "results": [
     {
       "test": "Default presentation hides preview notice",
@@ -662,7 +662,7 @@
         "saved": true,
         "fileReady": true,
         "success": true,
-        "id": "TC-PREVIEW-826186"
+        "id": "TC-PREVIEW-950566"
       }
     },
     {
@@ -692,7 +692,7 @@
       "pass": true,
       "value": {
         "confirmed": true,
-        "order": "TC-PREVIEW-27962",
+        "order": "TC-PREVIEW-52388",
         "cart": "[]"
       }
     },

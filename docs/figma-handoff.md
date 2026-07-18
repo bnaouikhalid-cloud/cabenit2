@@ -4,7 +4,7 @@
 
 Direct Figma access or Figma MCP was not available, so **no native Figma file was created**. The tested browser prototype and exported screenshots are the contest-stage source of truth. Manual Figma assembly remains if the client requires editable native frames.
 
-The 12 required final frames are in [`screenshots/`](screenshots/). A browser-based visual board is available at [`../presentation/index.html`](../presentation/index.html).
+The 12 required final frames were freshly exported from the final local browser build on July 18, 2026 and are in [`screenshots/`](screenshots/). A browser-based visual board is available at [`../presentation/index.html`](../presentation/index.html).
 
 ## Required pages
 

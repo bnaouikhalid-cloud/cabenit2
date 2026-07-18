@@ -6,7 +6,7 @@ All runtime assets are stored locally. No image is hotlinked. “Client public m
 |---|---|---|---|---|
 | `brand/temima-logo.png` | Temima public media: `Transparent-300x300.png` | Client public brand asset; master/rights to reconfirm | All headers, footers, checkout | PNG, 300×300, 53.8 KB |
 | `products/cabinet-wall-600.webp` | Temima public product media | Client public catalogue media | Home, Category, Product search, cart | WebP, 600×600, 1.5 KB |
-| `products/cabinet-wall-1024.webp` | Temima public product media | Client public catalogue media | Home type tile, Product gallery | WebP, 1024×1024, 3.5 KB |
+| `products/cabinet-wall-1024.webp` | Temima public product media | Client public catalogue media | Home type tile, Product gallery, Product social metadata | WebP, 1024×1024, 3.5 KB |
 | `products/cabinet-wall-24-600.webp` | Temima public product media | Client public catalogue media | Category/search | WebP, 600×600, 2.6 KB |
 | `products/cabinet-wall-24-1024.webp` | Temima public product media | Client public catalogue media | Category `srcset` | WebP, 1024×1024, 5.7 KB |
 | `products/cabinet-base-600.webp` | Temima public product media | Client public catalogue media | Home, Category/search | WebP, 600×600, 3.0 KB |
@@ -21,9 +21,9 @@ All runtime assets are stored locally. No image is hotlinked. “Client public m
 | `products/wall-front-closed-1024.webp` | Temima public product gallery | Client public catalogue media | Product gallery reserve | WebP, 1024×683, 2.0 KB |
 | `products/wall-front-open-1024.webp` | Temima public product gallery | Client public catalogue media | Home quality/inspiration, Product gallery | WebP, 1024×683, 5.2 KB |
 | `products/wall-side-closed-1024.webp` | Temima public product gallery | Client public catalogue media | Product gallery | WebP, 1024×683, 2.3 KB |
-| `lifestyle/kitchen-wide-1600.webp` | [Pexels photo 15062158](https://www.pexels.com/photo/15062158/), Curtis Adams | Pexels licence; free use | Home desktop hero, Product context | WebP, 1600×1067, 87.7 KB |
+| `lifestyle/kitchen-wide-1600.webp` | [Pexels photo 15062158](https://www.pexels.com/photo/15062158/), Curtis Adams | Pexels licence; free use | Home desktop hero, Product context, Home/Quote/Cart/Checkout social metadata | WebP, 1600×1067, 87.7 KB |
 | `lifestyle/kitchen-wide-800.webp` | Same Pexels source | Pexels licence; free use | Home mobile hero/Product thumb | WebP, 800×533, 27.4 KB |
-| `lifestyle/kitchen-detail-1600.webp` | [Pexels photo 5071180](https://www.pexels.com/photo/5071180/), Curtis Adams | Pexels licence; free use | Home inspiration | WebP, 1600×1067, 67.7 KB |
+| `lifestyle/kitchen-detail-1600.webp` | [Pexels photo 5071180](https://www.pexels.com/photo/5071180/), Curtis Adams | Pexels licence; free use | Home inspiration, Category/Resources social metadata | WebP, 1600×1067, 67.7 KB |
 | `lifestyle/kitchen-detail-800.webp` | Same Pexels source | Pexels licence; free use | Category hero/mobile | WebP, 800×533, 25.5 KB |
 | `lifestyle/kitchen-light-1600.webp` | [Pexels photo 19846364](https://www.pexels.com/photo/19846364/), Lisa Anna | Pexels licence; free use | Home inspiration | WebP, 1200×1800, 53.6 KB |
 | `lifestyle/kitchen-hero-1920.webp` | [Unsplash photo rlAuft8G8SE](https://unsplash.com/photos/rlAuft8G8SE), Point3D Commercial Imaging | Unsplash Licence | Licensed alternate/reserve | WebP, 1920×1280, 160.8 KB |

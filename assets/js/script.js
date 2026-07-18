@@ -1,25 +1,15 @@
-/* Temima Cabinets standalone presentation — local UI only; no backend or network calls. */
+/* Temima Cabinets customer-interface concept. Integration boundaries are documented in /docs. */
 (function () {
   'use strict';
 
   const body = document.body;
   const root = body.dataset.root || '';
   const page = body.dataset.page || '';
-  const CART_KEY = 'temimaPrototypeCart';
-  const COUPON_KEY = 'temimaPrototypeCoupon';
+  const CART_KEY = 'temimaCart';
+  const COUPON_KEY = 'temimaCoupon';
   const QUOTE_KEY = 'temimaQuoteDraft';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
-  const demoItem = {
-    id: 'TMM_W_W1830',
-    name: 'White Shaker 18″ Wall Cabinet',
-    type: 'Wall cabinet',
-    variation: '18″ W × 30″ H × 12″ D',
-    price: 174.32,
-    sku: 'TMM_W_W1830',
-    qty: 2,
-    image: 'assets/images/products/cabinet-wall-600.webp'
-  };
   const searchProducts = [
     { name: 'White Shaker 18″ Wall Cabinet', type: 'Wall cabinet', detail: '18″ wide · 3 heights', price: 174.32, image: 'cabinet-wall-600.webp' },
     { name: 'White Shaker 24″ Wall Cabinet', type: 'Wall cabinet', detail: '24″ wide · 3 heights', price: 234.67, image: 'cabinet-wall-24-600.webp' },
@@ -45,10 +35,7 @@
 
   function getCart() {
     const existing = localStorage.getItem(CART_KEY);
-    if (existing === null) {
-      localStorage.setItem(CART_KEY, JSON.stringify([demoItem]));
-      return [{ ...demoItem }];
-    }
+    if (existing === null) return [];
     try {
       const parsed = JSON.parse(existing);
       return Array.isArray(parsed) ? parsed : [];
@@ -113,14 +100,18 @@
     if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
   }
 
-  function closeMobileNav() {
+  function closeMobileNav(restoreFocus = true) {
     const nav = $('[data-mobile-nav]');
     const button = $('[data-menu-toggle]');
+    const wasOpen = nav?.classList.contains('is-open');
     nav?.classList.remove('is-open');
     nav?.setAttribute('aria-hidden', 'true');
     button?.setAttribute('aria-expanded', 'false');
     button?.setAttribute('aria-label', 'Open menu');
     body.classList.remove('nav-open');
+    if (activeOverlay === nav) activeOverlay = null;
+    if (wasOpen && restoreFocus) button?.focus();
+    if (restoreFocusTo === button) restoreFocusTo = null;
   }
 
   function initReviewMode() {
@@ -146,14 +137,17 @@
     const mobileNav = $('[data-mobile-nav]');
     menuButton?.addEventListener('click', () => {
       const opening = !mobileNav.classList.contains('is-open');
-      mobileNav.classList.toggle('is-open', opening);
-      mobileNav.setAttribute('aria-hidden', String(!opening));
-      menuButton.setAttribute('aria-expanded', String(opening));
-      menuButton.setAttribute('aria-label', opening ? 'Close menu' : 'Open menu');
-      body.classList.toggle('nav-open', opening);
-      if (opening) $('a', mobileNav)?.focus();
+      if (!opening) { closeMobileNav(); return; }
+      restoreFocusTo = menuButton;
+      activeOverlay = mobileNav;
+      mobileNav.classList.add('is-open');
+      mobileNav.setAttribute('aria-hidden', 'false');
+      menuButton.setAttribute('aria-expanded', 'true');
+      menuButton.setAttribute('aria-label', 'Close menu');
+      body.classList.add('nav-open');
+      $('a', mobileNav)?.focus();
     });
-    $$('[data-mobile-nav] a').forEach(link => link.addEventListener('click', closeMobileNav));
+    $$('[data-mobile-nav] a').forEach(link => link.addEventListener('click', () => closeMobileNav(false)));
 
     initSearch();
 
@@ -175,10 +169,20 @@
     const results = $('[data-search-results]');
     const form = $('[data-search-form]');
     if (!panel || !input || !results) return;
+    results.setAttribute('aria-live', 'polite');
+    const clearButton = document.createElement('button');
+    clearButton.className = 'search-clear';
+    clearButton.dataset.searchClear = '';
+    clearButton.type = 'button';
+    clearButton.hidden = true;
+    clearButton.textContent = 'Clear';
+    clearButton.setAttribute('aria-label', 'Clear product search');
+    input.insertAdjacentElement('afterend', clearButton);
 
     const render = query => {
       const normalized = query.trim().toLowerCase().replace(/[″”]/g, ' inch ');
       const matches = searchProducts.filter(product => !normalized || productSearchText(product).includes(normalized)).slice(0, 6);
+      clearButton.hidden = !query;
       searchIndex = -1;
       input.removeAttribute('aria-activedescendant');
       input.setAttribute('aria-expanded', String(matches.length > 0));
@@ -205,6 +209,11 @@
     $('[data-search-close]')?.addEventListener('click', () => closeOverlay(panel));
     panel.addEventListener('click', event => { if (event.target === panel) closeOverlay(panel); });
     input.addEventListener('input', () => render(input.value));
+    clearButton.addEventListener('click', () => {
+      input.value = '';
+      render('');
+      input.focus();
+    });
     input.addEventListener('keydown', event => {
       if (event.key === 'ArrowDown') { event.preventDefault(); selectIndex(searchIndex + 1); }
       if (event.key === 'ArrowUp') { event.preventDefault(); selectIndex(searchIndex - 1); }
@@ -477,7 +486,7 @@
       else fields[field.name] = field.value;
     });
     localStorage.setItem(QUOTE_KEY, JSON.stringify(fields));
-    if (announce) showToast('Progress saved securely on this device. Files are not saved.');
+    if (announce) showToast('Progress saved on this device. Selected files are not saved.');
   }
 
   function restoreQuoteDraft(form) {
@@ -540,8 +549,8 @@
         if (!files.length) { list.textContent = ''; return; }
         const allowed = /\.(pdf|jpe?g|png|heic)$/i;
         list.innerHTML = files.map(file => {
-          const issue = !allowed.test(file.name) ? 'Unsupported type' : file.size > 12 * 1024 * 1024 ? 'Over 12 MB' : 'Ready locally';
-          return `<span class="file-status ${issue === 'Ready locally' ? 'is-ready' : 'is-error'}">${escapeHtml(file.name)} · ${issue}</span>`;
+          const issue = !allowed.test(file.name) ? 'Unsupported type' : file.size > 12 * 1024 * 1024 ? 'Over 12 MB' : 'Selected';
+          return `<span class="file-status ${issue === 'Selected' ? 'is-ready' : 'is-error'}">${escapeHtml(file.name)} · ${issue}</span>`;
         }).join('');
       });
       ['dragenter', 'dragover'].forEach(eventName => zone.addEventListener(eventName, event => { event.preventDefault(); zone.classList.add('is-dragging'); }));
@@ -557,7 +566,7 @@
       window.setTimeout(() => {
         form.classList.add('is-complete');
         $('[data-quote-success]', form).classList.add('is-visible');
-        $('[data-submission-id]', form).textContent = `TC-PREVIEW-${String(Date.now()).slice(-6)}`;
+        $('[data-submission-id]', form).textContent = `TC-DESIGN-${String(Date.now()).slice(-6)}`;
         localStorage.removeItem(QUOTE_KEY);
         $('[data-quote-success]', form).focus();
       }, reducedMotion ? 0 : 500);
@@ -568,7 +577,7 @@
       form.classList.remove('is-complete');
       $('[data-quote-success]', form).classList.remove('is-visible');
       $('[data-quote-submit]', form).disabled = false;
-      $('[data-quote-submit]', form).textContent = 'Submit Design Brief';
+      $('[data-quote-submit]', form).textContent = 'Complete Design Brief';
       showStep(1);
     });
     showStep(1, false);
@@ -589,6 +598,7 @@
     const layout = $('[data-cart-layout]');
     const empty = $('[data-empty-cart]');
     const isEmpty = cart.length === 0;
+    holder?.setAttribute('tabindex', '-1');
     layout?.classList.toggle('hidden', isEmpty);
     empty?.classList.toggle('is-visible', isEmpty);
     if (!holder || isEmpty) { updateCartCount(); return; }
@@ -606,7 +616,7 @@
         const latest = getCart(); latest[index].qty = Math.min(99, Math.max(1, Number(event.target.value) || 1)); setCart(latest); renderCart(); showToast('Cart quantity updated.');
       });
       $('[data-remove-item]', line).addEventListener('click', () => {
-        const latest = getCart(); removedItem = { item: latest[index], index }; latest.splice(index, 1); setCart(latest); $('[data-undo-bar]').classList.add('is-visible'); renderCart();
+        const latest = getCart(); removedItem = { item: latest[index], index }; latest.splice(index, 1); setCart(latest); $('[data-undo-bar]').classList.add('is-visible'); renderCart(); $('[data-undo]')?.focus();
       });
     });
     updateCartTotals(cart);
@@ -625,7 +635,7 @@
     renderCart();
     $('[data-undo]')?.addEventListener('click', () => {
       if (!removedItem) return;
-      const cart = getCart(); cart.splice(removedItem.index, 0, removedItem.item); setCart(cart); removedItem = null; $('[data-undo-bar]').classList.remove('is-visible'); renderCart();
+      const cart = getCart(); cart.splice(removedItem.index, 0, removedItem.item); setCart(cart); removedItem = null; $('[data-undo-bar]').classList.remove('is-visible'); renderCart(); $('[data-cart-lines]')?.focus();
     });
     $('[data-coupon-toggle]')?.addEventListener('click', event => {
       const form = $('[data-coupon-form]'); const open = !form.classList.contains('is-open'); form.classList.toggle('is-open', open); event.currentTarget.setAttribute('aria-expanded', String(open)); if (open) $('[data-coupon-input]').focus();
@@ -639,7 +649,7 @@
     $('[data-estimate-shipping]')?.addEventListener('click', () => {
       const zip = $('[data-shipping-zip]').value.trim(); const output = $('[data-cart-shipping]');
       if (!/^\d{5}(-\d{4})?$/.test(zip)) { output.textContent = 'Enter a valid ZIP'; output.style.color = 'var(--error)'; return; }
-      output.textContent = 'Available at checkout'; output.style.color = ''; showToast('Delivery availability confirmed for checkout. Final method and cost are pending.');
+      output.textContent = 'Calculated at checkout'; output.style.color = ''; showToast('ZIP code saved. Final shipping method and cost are confirmed during checkout.');
     });
   }
 
@@ -657,7 +667,7 @@
     const discount = cartDiscount(subtotal);
     const total = Math.max(0, subtotal - discount);
     if ($('[data-checkout-subtotal]')) $('[data-checkout-subtotal]').textContent = money(total);
-    if ($('[data-checkout-shipping]')) $('[data-checkout-shipping]').textContent = 'Pending';
+    if ($('[data-checkout-shipping]')) $('[data-checkout-shipping]').textContent = 'To be confirmed';
     if ($('[data-checkout-total]')) $('[data-checkout-total]').textContent = money(total);
     if ($('[data-mobile-checkout-total]')) $('[data-mobile-checkout-total]').textContent = money(total);
   }
@@ -739,9 +749,9 @@
       const payment = $('input[name="paymentMethod"]:checked')?.value;
       const cardDigits = $('[name="cardNumber"]')?.value.replace(/\D/g, '') || '';
       if (payment === 'card' && cardDigits.endsWith('0002')) {
-        error.textContent = 'Payment simulator declined this test number. No charge was attempted.';
+        error.textContent = 'The card number could not be authorized. Review the number or try another card.';
         error.classList.add('is-visible');
-        showFieldError($('[name="cardNumber"]'), 'Use the success test number or choose another payment concept.');
+        showFieldError($('[name="cardNumber"]'), 'This card number could not be authorized.');
         setCheckoutProgress(3, 'error');
         $('[name="cardNumber"]').focus();
         return;
@@ -751,7 +761,7 @@
       const button = $('[data-place-order]');
       if (button.disabled) return;
       button.disabled = true;
-      button.textContent = 'Preparing confirmation…';
+      button.textContent = 'Reviewing details…';
       window.setTimeout(() => {
         $('[data-checkout-layout]').classList.add('hidden');
         $('[data-summary-toggle]')?.classList.add('hidden');
@@ -759,7 +769,7 @@
         confirmation.classList.add('is-visible');
         $('[data-confirmation-name]').textContent = form.elements.firstName.value || 'customer';
         $('[data-confirmation-email]').textContent = form.elements.email.value;
-        $('[data-confirmation-order]').textContent = `TC-PREVIEW-${String(Date.now()).slice(-5)}`;
+        $('[data-confirmation-order]').textContent = `TC-ORDER-${String(Date.now()).slice(-5)}`;
         setCheckoutProgress(4, 'complete');
         setCart([]);
         confirmation.focus();

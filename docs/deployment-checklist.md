@@ -2,18 +2,16 @@
 
 ## Standalone prototype deployment status
 
-- Public production alias: `https://temima-cabinets-premium-concept.vercel.app`
-- Deployed: July 18, 2026 through Vercel CLI
-- Direct requests verified `200`: Home, Category, Product, Free Quote, Cart, Checkout, Resources and Presentation
-- Static assets verified `200`: shared CSS, JavaScript, fonts, official logo and responsive imagery
-- Fresh private Chromium public run: 72 passed, 0 failed (`docs/qa-live-results.json`)
-- Nested route refreshes verified by direct HTTPS requests
-- Root opens Home; no protected preview was encountered
-- `robots.txt` blocks indexing because this is a client-presentation concept, not the production store
+- Target Vercel project: `cabenit01`
+- Target public production alias: `https://cabenit01.vercel.app/`
+- Final deployment: pending
+- Local final Chromium run: 103 passed, 0 failed (`docs/qa-browser-results.json`)
+- Final public Chromium run and response-header verification: pending
+- `robots.txt`, page metadata and Vercel configuration keep the concept noindex
 
 This status applies only to the standalone Vercel prototype. The live WordPress/WooCommerce store was not deployed or modified.
 
-This checklist is unexecuted because hosting/staging access was not supplied.
+The WordPress/WooCommerce migration checklist below remains unexecuted because hosting/staging access was not supplied.
 
 ## Ownership
 

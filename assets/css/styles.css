@@ -200,6 +200,9 @@ legend { padding: 0; }
 .search-box h2 { font-size: 1.3rem; }
 .search-input-wrap { display: flex; gap: 10px; }
 .search-input-wrap input { flex: 1; }
+.search-clear { min-width: 44px; min-height: 44px; padding: 0 12px; border: 1px solid var(--border); border-radius: 8px; color: var(--forest); background: transparent; font-weight: 700; cursor: pointer; }
+.search-clear:hover { background: var(--sage); }
+.search-clear[hidden] { display: none; }
 .search-suggestions { display: grid; gap: 8px; margin-top: 18px; }
 .search-suggestions a { display: flex; align-items: center; justify-content: space-between; padding: 12px; border-bottom: 1px solid var(--border); text-decoration: none; }
 
