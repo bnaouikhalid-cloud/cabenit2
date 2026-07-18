@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Standalone client-presentation prototype; not the production storefront.

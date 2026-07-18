@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" role="img" aria-label="White Shaker pantry cabinet illustration">
+  <defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f4f0e8"/><stop offset="1" stop-color="#ddd5c9"/></linearGradient><filter id="s"><feDropShadow dy="20" stdDeviation="18" flood-opacity=".16"/></filter></defs>
+  <rect width="800" height="650" fill="url(#bg)"/><ellipse cx="400" cy="587" rx="190" ry="25" fill="#17211d" opacity=".1"/>
+  <g filter="url(#s)"><rect x="265" y="54" width="270" height="524" fill="#fbfaf7" stroke="#d2cec5" stroke-width="7"/><path d="M290 80h220v223H290zm0 250h220v222H290z" fill="#f8f6f1" stroke="#d8d4cc" stroke-width="12"/><circle cx="494" cy="287" r="7" fill="#7c6b55"/><circle cx="494" cy="346" r="7" fill="#7c6b55"/></g>
+</svg>

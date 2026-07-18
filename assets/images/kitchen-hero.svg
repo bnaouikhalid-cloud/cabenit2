@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" role="img" aria-labelledby="title desc">
+  <title id="title">Architectural kitchen with warm white Shaker cabinets</title>
+  <desc id="desc">A refined illustrated kitchen interior showing cabinetry, island, shelves and stone counters.</desc>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#e9e4dc"/><stop offset="1" stop-color="#cfc6ba"/></linearGradient>
+    <linearGradient id="light" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".92"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efede8"/><stop offset="1" stop-color="#b8b5af"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="20" stdDeviation="22" flood-color="#17211d" flood-opacity=".2"/></filter>
+    <pattern id="grain" width="120" height="18" patternUnits="userSpaceOnUse"><path d="M0 8C22 2 45 14 68 7s37-2 52 2" fill="none" stroke="#8e6845" stroke-opacity=".2"/></pattern>
+  </defs>
+  <rect width="1600" height="1050" fill="url(#wall)"/>
+  <path d="M0 0h970L450 1050H0z" fill="url(#light)"/>
+  <rect y="846" width="1600" height="204" fill="#8c7258"/>
+  <rect y="846" width="1600" height="204" fill="url(#grain)" opacity=".8"/>
+  <g filter="url(#shadow)">
+    <rect x="112" y="182" width="660" height="646" rx="4" fill="#faf9f6"/>
+    <rect x="100" y="501" width="684" height="42" rx="3" fill="url(#stone)"/>
+    <g fill="#f7f4ee" stroke="#d8d4cd" stroke-width="5">
+      <rect x="126" y="208" width="204" height="275"/><rect x="342" y="208" width="204" height="275"/><rect x="558" y="208" width="200" height="275"/>
+      <rect x="126" y="556" width="204" height="257"/><rect x="342" y="556" width="204" height="257"/><rect x="558" y="556" width="200" height="257"/>
+    </g>
+    <g fill="none" stroke="#c9c5bd" stroke-width="7">
+      <rect x="146" y="228" width="164" height="235"/><rect x="362" y="228" width="164" height="235"/><rect x="578" y="228" width="160" height="235"/>
+      <rect x="146" y="576" width="164" height="217"/><rect x="362" y="576" width="164" height="217"/><rect x="578" y="576" width="160" height="217"/>
+    </g>
+    <g fill="#6f746f"><circle cx="302" cy="345" r="5"/><circle cx="350" cy="345" r="5"/><circle cx="518" cy="345" r="5"/><circle cx="566" cy="345" r="5"/></g>
+    <rect x="362" y="558" width="164" height="130" rx="2" fill="#17211d"/>
+    <rect x="380" y="577" width="128" height="80" rx="4" fill="#242c28"/><circle cx="444" cy="670" r="6" fill="#b58a5a"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="966" y="364" width="468" height="468" rx="3" fill="#20352d"/>
+    <rect x="944" y="337" width="512" height="46" rx="3" fill="url(#stone)"/>
+    <path d="M986 398h204v408H986zm224 0h204v408h-204z" fill="#27463a" stroke="#527064" stroke-width="5"/>
+    <path d="M1008 420h160v364h-160zm224 0h160v364h-160z" fill="none" stroke="#627d72" stroke-width="7"/>
+    <circle cx="1174" cy="600" r="6" fill="#c69d6b"/><circle cx="1226" cy="600" r="6" fill="#c69d6b"/>
+  </g>
+  <g fill="none" stroke="#513e2f" stroke-width="7" stroke-linecap="round"><path d="M1160 149v132"/><path d="M1318 116v166"/></g>
+  <g fill="#d7b787"><ellipse cx="1160" cy="302" rx="74" ry="20"/><path d="M1086 302l28-103h92l28 103z"/><ellipse cx="1318" cy="302" rx="64" ry="18"/><path d="M1254 302l22-84h84l22 84z"/></g>
+  <rect x="818" y="695" width="92" height="137" rx="46" fill="#c2a37f"/><path d="M835 832v106m58-106v106" stroke="#604a39" stroke-width="14"/>
+  <g transform="translate(1260 770)"><ellipse cx="0" cy="0" rx="52" ry="16" fill="#b58a5a"/><path d="M-30 0c0-55 10-92 30-120 20 28 30 65 30 120" fill="#6d856d"/><path d="M0-90c-47-12-70-46-61-78 37 7 62 31 61 78zm4-8c37-17 62-45 65-78-40 4-64 31-65 78z" fill="#536e5d"/></g>
+  <rect x="0" y="0" width="1600" height="1050" fill="none" stroke="#17211d" stroke-opacity=".08" stroke-width="28"/>
+</svg>

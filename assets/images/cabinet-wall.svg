@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" role="img" aria-label="White Shaker wall cabinet illustration">
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f5f2eb"/><stop offset="1" stop-color="#e5dfd4"/></linearGradient><filter id="s"><feDropShadow dy="20" stdDeviation="18" flood-opacity=".16"/></filter></defs>
+  <rect width="800" height="650" fill="url(#bg)"/><ellipse cx="400" cy="571" rx="207" ry="31" fill="#17211d" opacity=".1"/>
+  <g filter="url(#s)"><path d="M252 97h296l42 32v407l-42 27H252l-42-27V129z" fill="#eeeae1"/><path d="M252 97h296v466H252z" fill="#fbfaf7" stroke="#d4d0c8" stroke-width="7"/><path d="M277 126h246v408H277z" fill="none" stroke="#d8d4cc" stroke-width="14"/><path d="M306 156h188v348H306z" fill="#f8f6f1" stroke="#e6e2db" stroke-width="4"/><circle cx="510" cy="331" r="7" fill="#7c6b55"/></g>
+  <path d="M236 111l16-14v466l-16-22zM548 97l42 32v407l-42 27z" fill="#cfc9be" opacity=".6"/>
+</svg>

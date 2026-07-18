@@ -1,0 +1,710 @@
+{
+  "executedAt": "2026-07-18T02:13:48.234Z",
+  "base": "https://temima-cabinets-premium-concept.vercel.app",
+  "results": [
+    {
+      "test": "Default presentation hides preview notice",
+      "pass": true
+    },
+    {
+      "test": "Optional review mode notice and dismiss",
+      "pass": true,
+      "value": {
+        "visible": true,
+        "dismissed": true
+      }
+    },
+    {
+      "test": "home responsive 360px",
+      "pass": true,
+      "value": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home responsive 390px",
+      "pass": true,
+      "value": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home responsive 430px",
+      "pass": true,
+      "value": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home responsive 768px",
+      "pass": true,
+      "value": {
+        "innerWidth": 768,
+        "scrollWidth": 768,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home responsive 1024px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1024,
+        "scrollWidth": 1024,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home responsive 1280px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home responsive 1440px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home responsive 1920px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1920,
+        "scrollWidth": 1920,
+        "title": "Temima Cabinets — Designed for the Kitchen. Built for Confidence.",
+        "h1": "Premium cabinets.A kitchen designed around you.",
+        "images": []
+      }
+    },
+    {
+      "test": "home internal links and fragments",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "category responsive 360px",
+      "pass": true,
+      "value": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category responsive 390px",
+      "pass": true,
+      "value": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category responsive 430px",
+      "pass": true,
+      "value": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category responsive 768px",
+      "pass": true,
+      "value": {
+        "innerWidth": 768,
+        "scrollWidth": 768,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category responsive 1024px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1024,
+        "scrollWidth": 1024,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category responsive 1280px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category responsive 1440px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category responsive 1920px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1920,
+        "scrollWidth": 1920,
+        "title": "White Shaker Cabinets — Temima Cabinets",
+        "h1": "White Shaker",
+        "images": []
+      }
+    },
+    {
+      "test": "category internal links and fragments",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "product responsive 360px",
+      "pass": true,
+      "value": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product responsive 390px",
+      "pass": true,
+      "value": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product responsive 430px",
+      "pass": true,
+      "value": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product responsive 768px",
+      "pass": true,
+      "value": {
+        "innerWidth": 768,
+        "scrollWidth": 768,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product responsive 1024px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1024,
+        "scrollWidth": 1024,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product responsive 1280px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product responsive 1440px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product responsive 1920px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1920,
+        "scrollWidth": 1920,
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "h1": "White Shaker 18″ Wall Cabinet",
+        "images": []
+      }
+    },
+    {
+      "test": "product internal links and fragments",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "free-quote responsive 360px",
+      "pass": true,
+      "value": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote responsive 390px",
+      "pass": true,
+      "value": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote responsive 430px",
+      "pass": true,
+      "value": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote responsive 768px",
+      "pass": true,
+      "value": {
+        "innerWidth": 768,
+        "scrollWidth": 768,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote responsive 1024px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1024,
+        "scrollWidth": 1024,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote responsive 1280px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote responsive 1440px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote responsive 1920px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1920,
+        "scrollWidth": 1920,
+        "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
+        "h1": "See your kitchen before you buy.",
+        "images": []
+      }
+    },
+    {
+      "test": "free-quote internal links and fragments",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "cart responsive 360px",
+      "pass": true,
+      "value": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart responsive 390px",
+      "pass": true,
+      "value": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart responsive 430px",
+      "pass": true,
+      "value": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart responsive 768px",
+      "pass": true,
+      "value": {
+        "innerWidth": 768,
+        "scrollWidth": 768,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart responsive 1024px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1024,
+        "scrollWidth": 1024,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart responsive 1280px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart responsive 1440px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart responsive 1920px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1920,
+        "scrollWidth": 1920,
+        "title": "Your Cabinet Cart — Temima Cabinets",
+        "h1": "Your cabinet cart",
+        "images": []
+      }
+    },
+    {
+      "test": "cart internal links and fragments",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "checkout responsive 360px",
+      "pass": true,
+      "value": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout responsive 390px",
+      "pass": true,
+      "value": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout responsive 430px",
+      "pass": true,
+      "value": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout responsive 768px",
+      "pass": true,
+      "value": {
+        "innerWidth": 768,
+        "scrollWidth": 768,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout responsive 1024px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1024,
+        "scrollWidth": 1024,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout responsive 1280px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout responsive 1440px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout responsive 1920px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1920,
+        "scrollWidth": 1920,
+        "title": "Guest Checkout — Temima Cabinets",
+        "h1": "Guest checkout",
+        "images": []
+      }
+    },
+    {
+      "test": "checkout internal links and fragments",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "Mobile menu state",
+      "pass": true,
+      "value": {
+        "open": true,
+        "expanded": "true",
+        "hidden": "false"
+      }
+    },
+    {
+      "test": "Search results and keyboard navigation",
+      "pass": true,
+      "value": {
+        "open": true,
+        "count": 2,
+        "active": "search-option-0"
+      }
+    },
+    {
+      "test": "Search no-results state",
+      "pass": true,
+      "value": {
+        "options": 0,
+        "empty": true
+      }
+    },
+    {
+      "test": "Category URL filter, sort and Quick View",
+      "pass": true,
+      "value": {
+        "initial": "2",
+        "visible": 2,
+        "first": "234.67",
+        "quick": true
+      }
+    },
+    {
+      "test": "Mobile filter drawer",
+      "pass": true,
+      "value": {
+        "closed": true,
+        "count": "2"
+      }
+    },
+    {
+      "test": "Mobile product bar requires size",
+      "pass": true,
+      "value": {
+        "state": "choose",
+        "text": "Choose a size",
+        "enabled": true,
+        "selected": false
+      }
+    },
+    {
+      "test": "Variation selection and Add to Cart",
+      "pass": true,
+      "value": {
+        "price": "$197.42",
+        "sku": "TMM_W_W1836",
+        "state": "add",
+        "count": "3"
+      }
+    },
+    {
+      "test": "Cart quantity, coupon and delivery check",
+      "pass": true,
+      "value": {
+        "before": 3,
+        "after": 4,
+        "discount": "−$100.00",
+        "shipping": "Available at checkout"
+      }
+    },
+    {
+      "test": "Cart remove and undo",
+      "pass": true,
+      "value": {
+        "before": "4",
+        "removed": "1",
+        "restored": "4"
+      }
+    },
+    {
+      "test": "Quote draft, file state, four steps and local success",
+      "pass": true,
+      "value": {
+        "saved": true,
+        "fileReady": true,
+        "success": true,
+        "id": "TC-PREVIEW-826186"
+      }
+    },
+    {
+      "test": "Mobile checkout summary",
+      "pass": true,
+      "value": {
+        "expanded": "true",
+        "open": true
+      }
+    },
+    {
+      "test": "Checkout field validation",
+      "pass": true,
+      "value": {
+        "message": "Please review step 1 and correct the highlighted field.",
+        "invalid": 13,
+        "errorStep": "1"
+      }
+    },
+    {
+      "test": "Checkout declined payment state",
+      "pass": true,
+      "value": "Payment simulator declined this test number. No charge was attempted."
+    },
+    {
+      "test": "Guest checkout success state",
+      "pass": true,
+      "value": {
+        "confirmed": true,
+        "order": "TC-PREVIEW-27962",
+        "cart": "[]"
+      }
+    },
+    {
+      "test": "Image and network requests",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "Runtime exceptions and console errors",
+      "pass": true,
+      "value": []
+    }
+  ]
+}

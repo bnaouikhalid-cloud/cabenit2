@@ -1,0 +1,48 @@
+# QA report
+
+Executed: July 18, 2026 using local Chromium against `http://127.0.0.1:4173/`, followed by the same suite in a fresh private Chromium profile against the public Vercel production alias.
+
+## Result
+
+**Local: 70 passed · 0 failed. Public Vercel: 72 passed · 0 failed.** The public pass also verifies that default presentation mode hides the preview notice and `?review=1` shows a dismissible compact notice. Machine-readable evidence is in [`qa-browser-results.json`](qa-browser-results.json) and [`qa-live-results.json`](qa-live-results.json). The browser harness is [`../_cdp-test.cjs`](../_cdp-test.cjs).
+
+## Executed coverage
+
+| Area | Result | Evidence |
+|---|---|---|
+| Six mandatory routes | Pass | Correct title/H1 and successful render on every route |
+| Responsive widths | Pass | Home, Category, Product, Free Quote, Cart and Checkout at 360, 390, 430, 768, 1024, 1280, 1440 and 1920px |
+| Horizontal overflow | Pass | Document scroll width never exceeded viewport width |
+| Images | Pass | All rendered images completed with a non-zero natural width |
+| Internal links/fragments | Pass | Every local link on all six routes fetched successfully and every referenced fragment existed |
+| Mobile navigation | Pass | Opens, closes and synchronizes `aria-expanded`/`aria-hidden` |
+| Search | Pass | Product filtering, two pantry results, Arrow-key selection and no-results state |
+| Category | Pass | URL type filter, product count, price sort, active grid and Quick View |
+| Mobile filters | Pass | Drawer opens/applies/closes and shows matching total |
+| Product | Pass | Mobile “Choose a size” guard, exact variation price/SKU, enabled Add to Cart and persistent count |
+| Cart | Pass | Quantity, coupon result, delivery-availability check, remove and undo |
+| Quote | Pass | Local draft, selected PDF state, four-step validation, duplicate guard and `TC-PREVIEW` success ID |
+| Checkout | Pass | Collapsible mobile summary, associated required-field errors and error-step state |
+| Payment failure | Pass | Number ending `0002` shows declined simulator state with no charge |
+| Payment success | Pass | `4242…` produces local confirmation, `TC-PREVIEW` ID and clears cart |
+| Network/404 | Pass | No failed image, CSS, JS, font or page requests during the run |
+| Console | Pass | No runtime exceptions or console errors |
+
+## Visual inspection
+
+The 12 required full-page frames were freshly captured and inspected for hierarchy, image quality, clipping, sticky controls, dense mobile groups, hero height, footer layout and modal/form composition. Additional frames cover tablet views, Search, Quick View, selected Product, Quote success, Checkout validation and Checkout confirmation.
+
+Screenshot folder: [`screenshots/`](screenshots/).
+
+## Accessibility checks executed
+
+- Keyboard-operable Search results and quality tabs
+- Modal/drawer ARIA state, Escape path, focus containment and focus restoration in code review/runtime interaction
+- Required variation guard and live status copy
+- Form `aria-invalid`, `aria-describedby`, live/alert regions and checkout step error state
+- Explicit labels, semantic landmarks, heading presence and non-color selection/error cues
+- 44px primary touch-target styling and reduced-motion media query
+
+## Limitations / production QA remaining
+
+The in-app browser plugin runtime could not initialize because its service returned missing sandbox-policy metadata; the project Chromium/CDP harness was used as the browser fallback. VoiceOver, NVDA, JAWS, TalkBack, physical iOS/Android devices and Safari were not available. Real WooCommerce sessions, gateway iframes, shipping/tax rules, CRM/email delivery, secure uploads, caching, analytics and production WordPress hosting still require staging tests with approved credentials.

@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 650" role="img" aria-label="White Shaker drawer base cabinet illustration">
+  <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#f6f2ea"/><stop offset="1" stop-color="#e3ddd2"/></linearGradient><filter id="s"><feDropShadow dy="20" stdDeviation="18" flood-opacity=".16"/></filter></defs>
+  <rect width="800" height="650" fill="url(#bg)"/><ellipse cx="400" cy="576" rx="205" ry="27" fill="#17211d" opacity=".1"/>
+  <g filter="url(#s)"><rect x="245" y="118" width="310" height="448" fill="#fbfaf7" stroke="#d3cfc7" stroke-width="7"/><path d="M267 147h266v105H267zm0 132h266v105H267zm0 132h266v125H267z" fill="#f8f6f1" stroke="#d8d4cc" stroke-width="11"/><g fill="#8b7459"><circle cx="400" cy="200" r="6"/><circle cx="400" cy="332" r="6"/><circle cx="400" cy="473" r="6"/></g><path d="M228 107h344l-17 30H245z" fill="#ece9e3" stroke="#c3bfb7" stroke-width="5"/></g>
+</svg>
