@@ -2,6 +2,10 @@
 
 All runtime assets are stored locally. No image is hotlinked. “Client public media” means downloaded from the current Temima Cabinets public website for concept use; the client should confirm ownership and provide masters for production.
 
+## GPT Image 2 asset status
+
+The requested generated collection was not created on July 18, 2026 because `OPENAI_API_KEY` was not configured in the working environment. No generated-image ownership, quality or integration claim is made. The production-ready prompt set, two-candidate review gate, responsive crop plan, filenames and integration map are in [`gpt-image-2-prompts.md`](gpt-image-2-prompts.md). Reserved local folders exist under `assets/images/generated/`; they contain no customer-facing generated imagery.
+
 | Filename | Source | Ownership / licence | Page usage | Optimization |
 |---|---|---|---|---|
 | `brand/temima-logo.png` | Temima public media: `Transparent-300x300.png` | Client public brand asset; master/rights to reconfirm | All headers, footers, checkout | PNG, 300×300, 53.8 KB |
@@ -42,6 +46,7 @@ All runtime assets are stored locally. No image is hotlinked. “Client public m
 
 ## Production actions
 
+- Generate and manually approve the coordinated GPT Image 2 collection using [`gpt-image-2-prompts.md`](gpt-image-2-prompts.md); do not replace exact product/SKU imagery with generated substitutes.
 - Obtain original official logo/favicon and client product-photo masters.
 - Confirm Pexels/Unsplash selections with the client; retain source attribution in project records.
 - Generate AVIF plus WebP responsive derivatives during WordPress media processing.

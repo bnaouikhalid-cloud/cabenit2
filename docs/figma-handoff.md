@@ -66,3 +66,5 @@ Annotate Elementor-owned editorial blocks, WooCommerce dynamic fields, hook-driv
 ## Assets
 
 Import the official local logo, WebP product images and licensed WebP kitchen photography listed in `docs/asset-register.md`. Retained SVG files are diagrams/decorative references, not substitutes for product photography. Export optimized AVIF/WebP in production, with JPEG fallback only where required.
+
+The coordinated GPT Image 2 collection remains pending because authenticated image-generation access was not configured. When generated and approved, import only the selected responsive derivatives specified in [`gpt-image-2-prompts.md`](gpt-image-2-prompts.md); label generated environmental imagery as inspiration and retain official client product images for exact SKUs.

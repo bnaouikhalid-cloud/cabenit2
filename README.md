@@ -55,6 +55,7 @@ See [`docs/content-verification.md`](docs/content-verification.md), [`docs/claim
 - [`docs/claims-audit.md`](docs/claims-audit.md)
 - [`docs/content-verification.md`](docs/content-verification.md)
 - [`docs/asset-register.md`](docs/asset-register.md)
+- [`docs/gpt-image-2-prompts.md`](docs/gpt-image-2-prompts.md)
 - [`docs/seo-migration-checklist.md`](docs/seo-migration-checklist.md)
 - [`docs/performance-report.md`](docs/performance-report.md)
 - [`docs/qa-report.md`](docs/qa-report.md)
