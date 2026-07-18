@@ -187,10 +187,10 @@
       input.removeAttribute('aria-activedescendant');
       input.setAttribute('aria-expanded', String(matches.length > 0));
       if (!matches.length) {
-        results.innerHTML = '<div class="search-empty"><strong>No matching cabinets</strong><span>Try a cabinet type, width or “White Shaker”.</span><a href="' + root + 'category/">Browse all cabinets</a></div>';
+        results.innerHTML = '<div class="search-empty"><strong>No matching cabinets</strong><span>Try a cabinet type, width or “White Shaker”.</span><a href="' + root + 'category/index.html">Browse all cabinets</a></div>';
         return;
       }
-      results.innerHTML = matches.map((product, index) => `<a id="search-option-${index}" class="search-result" href="${root}product/" role="option" aria-selected="false" data-search-option><img src="${root}${product.image}" alt="" width="72" height="72"><span><small>${escapeHtml(product.type)}</small><strong>${escapeHtml(product.name)}</strong><em>${escapeHtml(product.detail)} · From ${money(product.price)}</em></span><b aria-hidden="true">→</b></a>`).join('');
+      results.innerHTML = matches.map((product, index) => `<a id="search-option-${index}" class="search-result" href="${root}product/index.html" role="option" aria-selected="false" data-search-option><img src="${root}${product.image}" alt="" width="72" height="72"><span><small>${escapeHtml(product.type)}</small><strong>${escapeHtml(product.name)}</strong><em>${escapeHtml(product.detail)} · From ${money(product.price)}</em></span><b aria-hidden="true">→</b></a>`).join('');
     };
 
     const selectIndex = next => {
@@ -617,7 +617,7 @@
     layout?.classList.toggle('hidden', isEmpty);
     empty?.classList.toggle('is-visible', isEmpty);
     if (!holder || isEmpty) { updateCartCount(); return; }
-    holder.innerHTML = cart.map((item, index) => `<article class="cart-line" data-cart-index="${index}"><div class="cart-line-image"><img src="${root}${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" width="600" height="600"></div><div class="cart-line-copy"><span class="line-type">${escapeHtml(item.type || 'Cabinet')}</span><h2>${escapeHtml(item.name)}</h2><div class="line-meta"><span>${escapeHtml(item.variation)}</span><span>SKU: ${escapeHtml(item.sku)}</span></div><div class="line-unit-price">${money(item.price)} each</div><div class="line-actions"><div class="quantity"><button type="button" aria-label="Decrease ${escapeHtml(item.name)} quantity" data-cart-minus>−</button><input type="number" min="1" max="99" value="${Number(item.qty)}" aria-label="${escapeHtml(item.name)} quantity" data-cart-qty><button type="button" aria-label="Increase ${escapeHtml(item.name)} quantity" data-cart-plus>+</button></div><a class="text-link" href="${root}product/">Edit selection</a><button class="remove-item" type="button" data-remove-item>Remove</button></div></div><div class="line-price"><strong>${money(Number(item.price) * Number(item.qty))}</strong><small>${Number(item.qty)} ${Number(item.qty) === 1 ? 'cabinet' : 'cabinets'}</small></div></article>`).join('');
+    holder.innerHTML = cart.map((item, index) => `<article class="cart-line" data-cart-index="${index}"><div class="cart-line-image"><img src="${root}${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" width="600" height="600"></div><div class="cart-line-copy"><span class="line-type">${escapeHtml(item.type || 'Cabinet')}</span><h2>${escapeHtml(item.name)}</h2><div class="line-meta"><span>${escapeHtml(item.variation)}</span><span>SKU: ${escapeHtml(item.sku)}</span></div><div class="line-unit-price">${money(item.price)} each</div><div class="line-actions"><div class="quantity"><button type="button" aria-label="Decrease ${escapeHtml(item.name)} quantity" data-cart-minus>−</button><input type="number" min="1" max="99" value="${Number(item.qty)}" aria-label="${escapeHtml(item.name)} quantity" data-cart-qty><button type="button" aria-label="Increase ${escapeHtml(item.name)} quantity" data-cart-plus>+</button></div><a class="text-link" href="${root}product/index.html">Edit selection</a><button class="remove-item" type="button" data-remove-item>Remove</button></div></div><div class="line-price"><strong>${money(Number(item.price) * Number(item.qty))}</strong><small>${Number(item.qty)} ${Number(item.qty) === 1 ? 'cabinet' : 'cabinets'}</small></div></article>`).join('');
     $$('[data-cart-index]', holder).forEach(line => {
       const index = Number(line.dataset.cartIndex);
       const updateQty = difference => {
@@ -672,7 +672,7 @@
     if (page !== 'checkout') return;
     const cart = getCart();
     const holder = $('[data-checkout-items]');
-    if (holder) holder.innerHTML = cart.length ? cart.map(item => `<div class="checkout-item"><div class="checkout-item-image"><img src="${root}${escapeHtml(item.image)}" alt="" width="600" height="600"><span class="item-count">${Number(item.qty)}</span></div><div><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.variation)} · ${escapeHtml(item.sku)}</small></div><span class="checkout-item-price">${money(Number(item.price) * Number(item.qty))}</span></div>`).join('') : '<p>Your cart is empty. <a href="../category/">Return to the collection</a>.</p>';
+    if (holder) holder.innerHTML = cart.length ? cart.map(item => `<div class="checkout-item"><div class="checkout-item-image"><img src="${root}${escapeHtml(item.image)}" alt="" width="600" height="600"><span class="item-count">${Number(item.qty)}</span></div><div><strong>${escapeHtml(item.name)}</strong><small>${escapeHtml(item.variation)} · ${escapeHtml(item.sku)}</small></div><span class="checkout-item-price">${money(Number(item.price) * Number(item.qty))}</span></div>`).join('') : '<p>Your cart is empty. <a href="../category/index.html">Return to the collection</a>.</p>';
     updateCheckoutTotals();
   }
 
