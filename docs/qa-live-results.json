@@ -1,7 +1,11 @@
 {
-  "executedAt": "2026-07-18T16:42:32.659Z",
+  "executedAt": "2026-07-18T17:09:57.178Z",
   "base": "https://cabenit01.vercel.app",
   "results": [
+    {
+      "test": "Fresh visitor cart starts empty",
+      "pass": true
+    },
     {
       "test": "Default presentation hides preview notice",
       "pass": true
@@ -103,6 +107,55 @@
       }
     },
     {
+      "test": "home metadata and DOM accessibility",
+      "pass": true,
+      "value": {
+        "canonical": true,
+        "description": true,
+        "robots": "noindex,nofollow,noarchive",
+        "openGraph": true,
+        "duplicateIds": [],
+        "unnamedButtons": 0,
+        "unlabeledControls": [],
+        "prohibited": []
+      }
+    },
+    {
+      "test": "home browser transfer profile",
+      "pass": true,
+      "value": {
+        "transferBytes": 213559,
+        "decodedBytes": 331534,
+        "largest": [
+          {
+            "asset": "/assets/images/brand/temima-logo.png",
+            "transferSize": 55401,
+            "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/fonts/source-serif-4-italic-latin.woff2",
+            "transferSize": 51816,
+            "decodedSize": 51516
+          },
+          {
+            "asset": "/assets/images/lifestyle/kitchen-wide-800.webp",
+            "transferSize": 28370,
+            "decodedSize": 28070
+          },
+          {
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
+          },
+          {
+            "asset": "/assets/css/styles.css",
+            "transferSize": 20825,
+            "decodedSize": 92026
+          }
+        ]
+      }
+    },
+    {
       "test": "home internal links and fragments",
       "pass": true,
       "value": []
@@ -193,6 +246,55 @@
         "title": "White Shaker Cabinets — Temima Cabinets",
         "h1": "White Shaker",
         "images": []
+      }
+    },
+    {
+      "test": "category metadata and DOM accessibility",
+      "pass": true,
+      "value": {
+        "canonical": true,
+        "description": true,
+        "robots": "noindex,nofollow,noarchive",
+        "openGraph": true,
+        "duplicateIds": [],
+        "unnamedButtons": 0,
+        "unlabeledControls": [],
+        "prohibited": []
+      }
+    },
+    {
+      "test": "category browser transfer profile",
+      "pass": true,
+      "value": {
+        "transferBytes": 162653,
+        "decodedBytes": 278634,
+        "largest": [
+          {
+            "asset": "/assets/images/brand/temima-logo.png",
+            "transferSize": 55401,
+            "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/images/lifestyle/kitchen-detail-800.webp",
+            "transferSize": 26392,
+            "decodedSize": 26092
+          },
+          {
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
+          },
+          {
+            "asset": "/assets/css/styles.css",
+            "transferSize": 20825,
+            "decodedSize": 92026
+          },
+          {
+            "asset": "/assets/js/script.js",
+            "transferSize": 11608,
+            "decodedSize": 41867
+          }
+        ]
       }
     },
     {
@@ -289,6 +391,55 @@
       }
     },
     {
+      "test": "product metadata and DOM accessibility",
+      "pass": true,
+      "value": {
+        "canonical": true,
+        "description": true,
+        "robots": "noindex,nofollow,noarchive",
+        "openGraph": true,
+        "duplicateIds": [],
+        "unnamedButtons": 0,
+        "unlabeledControls": [],
+        "prohibited": []
+      }
+    },
+    {
+      "test": "product browser transfer profile",
+      "pass": true,
+      "value": {
+        "transferBytes": 213208,
+        "decodedBytes": 325826,
+        "largest": [
+          {
+            "asset": "/assets/images/brand/temima-logo.png",
+            "transferSize": 55401,
+            "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/fonts/source-serif-4-italic-latin.woff2",
+            "transferSize": 51816,
+            "decodedSize": 51516
+          },
+          {
+            "asset": "/assets/images/lifestyle/kitchen-wide-800.webp",
+            "transferSize": 28370,
+            "decodedSize": 28070
+          },
+          {
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
+          },
+          {
+            "asset": "/assets/css/styles.css",
+            "transferSize": 20825,
+            "decodedSize": 92026
+          }
+        ]
+      }
+    },
+    {
       "test": "product internal links and fragments",
       "pass": true,
       "value": []
@@ -379,6 +530,55 @@
         "title": "Get a Free 3D Kitchen Design — Temima Cabinets",
         "h1": "See your kitchen before you buy.",
         "images": []
+      }
+    },
+    {
+      "test": "free-quote metadata and DOM accessibility",
+      "pass": true,
+      "value": {
+        "canonical": true,
+        "description": true,
+        "robots": "noindex,nofollow,noarchive",
+        "openGraph": true,
+        "duplicateIds": [],
+        "unnamedButtons": 0,
+        "unlabeledControls": [],
+        "prohibited": []
+      }
+    },
+    {
+      "test": "free-quote browser transfer profile",
+      "pass": true,
+      "value": {
+        "transferBytes": 172134,
+        "decodedBytes": 286664,
+        "largest": [
+          {
+            "asset": "/assets/images/brand/temima-logo.png",
+            "transferSize": 55401,
+            "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/fonts/source-serif-4-italic-latin.woff2",
+            "transferSize": 51816,
+            "decodedSize": 51516
+          },
+          {
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
+          },
+          {
+            "asset": "/assets/css/styles.css",
+            "transferSize": 20825,
+            "decodedSize": 92026
+          },
+          {
+            "asset": "/assets/js/script.js",
+            "transferSize": 11608,
+            "decodedSize": 41867
+          }
+        ]
       }
     },
     {
@@ -475,6 +675,55 @@
       }
     },
     {
+      "test": "cart metadata and DOM accessibility",
+      "pass": true,
+      "value": {
+        "canonical": true,
+        "description": true,
+        "robots": "noindex,nofollow,noarchive",
+        "openGraph": true,
+        "duplicateIds": [],
+        "unnamedButtons": 0,
+        "unlabeledControls": [],
+        "prohibited": []
+      }
+    },
+    {
+      "test": "cart browser transfer profile",
+      "pass": true,
+      "value": {
+        "transferBytes": 123294,
+        "decodedBytes": 230637,
+        "largest": [
+          {
+            "asset": "/assets/images/brand/temima-logo.png",
+            "transferSize": 55401,
+            "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
+          },
+          {
+            "asset": "/assets/css/styles.css",
+            "transferSize": 20825,
+            "decodedSize": 92026
+          },
+          {
+            "asset": "/assets/js/script.js",
+            "transferSize": 11608,
+            "decodedSize": 41867
+          },
+          {
+            "asset": "/cart/",
+            "transferSize": 3974,
+            "decodedSize": 11357
+          }
+        ]
+      }
+    },
+    {
       "test": "cart internal links and fragments",
       "pass": true,
       "value": []
@@ -568,9 +817,231 @@
       }
     },
     {
+      "test": "checkout metadata and DOM accessibility",
+      "pass": true,
+      "value": {
+        "canonical": true,
+        "description": true,
+        "robots": "noindex,nofollow,noarchive",
+        "openGraph": true,
+        "duplicateIds": [],
+        "unnamedButtons": 0,
+        "unlabeledControls": [],
+        "prohibited": []
+      }
+    },
+    {
+      "test": "checkout browser transfer profile",
+      "pass": true,
+      "value": {
+        "transferBytes": 118331,
+        "decodedBytes": 226175,
+        "largest": [
+          {
+            "asset": "/assets/images/brand/temima-logo.png",
+            "transferSize": 55401,
+            "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
+          },
+          {
+            "asset": "/assets/css/styles.css",
+            "transferSize": 20825,
+            "decodedSize": 92026
+          },
+          {
+            "asset": "/assets/js/script.js",
+            "transferSize": 11608,
+            "decodedSize": 41867
+          },
+          {
+            "asset": "/checkout/",
+            "transferSize": 3481,
+            "decodedSize": 10765
+          }
+        ]
+      }
+    },
+    {
       "test": "checkout internal links and fragments",
       "pass": true,
       "value": []
+    },
+    {
+      "test": "resources responsive 360px",
+      "pass": true,
+      "value": {
+        "innerWidth": 360,
+        "scrollWidth": 360,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources responsive 390px",
+      "pass": true,
+      "value": {
+        "innerWidth": 390,
+        "scrollWidth": 390,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources responsive 430px",
+      "pass": true,
+      "value": {
+        "innerWidth": 430,
+        "scrollWidth": 430,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources responsive 768px",
+      "pass": true,
+      "value": {
+        "innerWidth": 768,
+        "scrollWidth": 768,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources responsive 1024px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1024,
+        "scrollWidth": 1024,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources responsive 1280px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1280,
+        "scrollWidth": 1280,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources responsive 1440px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1440,
+        "scrollWidth": 1440,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources responsive 1920px",
+      "pass": true,
+      "value": {
+        "innerWidth": 1920,
+        "scrollWidth": 1920,
+        "title": "Planning & Customer Care Resources — Temima Cabinets",
+        "h1": "Guides for the room, the order and what comes next.",
+        "images": []
+      }
+    },
+    {
+      "test": "resources metadata and DOM accessibility",
+      "pass": true,
+      "value": {
+        "canonical": true,
+        "description": true,
+        "robots": "noindex,nofollow,noarchive",
+        "openGraph": true,
+        "duplicateIds": [],
+        "unnamedButtons": 0,
+        "unlabeledControls": [],
+        "prohibited": []
+      }
+    },
+    {
+      "test": "resources browser transfer profile",
+      "pass": true,
+      "value": {
+        "transferBytes": 169450,
+        "decodedBytes": 278958,
+        "largest": [
+          {
+            "asset": "/assets/images/brand/temima-logo.png",
+            "transferSize": 55401,
+            "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/fonts/source-serif-4-italic-latin.woff2",
+            "transferSize": 51816,
+            "decodedSize": 51516
+          },
+          {
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
+          },
+          {
+            "asset": "/assets/css/styles.css",
+            "transferSize": 20825,
+            "decodedSize": 92026
+          },
+          {
+            "asset": "/assets/js/script.js",
+            "transferSize": 11608,
+            "decodedSize": 41867
+          }
+        ]
+      }
+    },
+    {
+      "test": "resources internal links and fragments",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "Primary mobile touch targets are at least 44px",
+      "pass": true,
+      "value": []
+    },
+    {
+      "test": "Reduced-motion mode suppresses smooth motion",
+      "pass": true,
+      "value": {
+        "scroll": "auto",
+        "transition": "1e-05s"
+      }
+    },
+    {
+      "test": "Browser Back and Forward preserve nested routes",
+      "pass": true,
+      "value": {
+        "backPath": "/",
+        "forwardPath": "/category/"
+      }
+    },
+    {
+      "test": "Nested-page refresh preserves HTML, CSS and JavaScript",
+      "pass": true,
+      "value": {
+        "path": "/product/",
+        "title": "White Shaker 18-inch Wall Cabinet — Temima Cabinets",
+        "styled": "Manrope, \"Segoe UI\", Helvetica, Arial, sans-serif",
+        "script": true
+      }
     },
     {
       "test": "Mobile menu state",
@@ -579,6 +1050,15 @@
         "open": true,
         "expanded": "true",
         "hidden": "false"
+      }
+    },
+    {
+      "test": "Mobile menu focus trap, Escape and focus restoration",
+      "pass": true,
+      "value": {
+        "trapped": true,
+        "closed": true,
+        "focusReturned": true
       }
     },
     {
@@ -599,6 +1079,15 @@
       }
     },
     {
+      "test": "Search clear action",
+      "pass": true,
+      "value": {
+        "value": "",
+        "count": 6,
+        "focused": true
+      }
+    },
+    {
       "test": "Category URL filter, sort and Quick View",
       "pass": true,
       "value": {
@@ -606,6 +1095,14 @@
         "visible": 2,
         "first": "234.67",
         "quick": true
+      }
+    },
+    {
+      "test": "Quick View Escape and focus restoration",
+      "pass": true,
+      "value": {
+        "closed": true,
+        "focusReturned": true
       }
     },
     {
@@ -643,7 +1140,7 @@
         "before": 3,
         "after": 4,
         "discount": "−$100.00",
-        "shipping": "Available at checkout"
+        "shipping": "Calculated at checkout"
       }
     },
     {
@@ -662,7 +1159,7 @@
         "saved": true,
         "fileReady": true,
         "success": true,
-        "id": "TC-PREVIEW-950566"
+        "id": "TC-DESIGN-594960"
       }
     },
     {
@@ -685,14 +1182,14 @@
     {
       "test": "Checkout declined payment state",
       "pass": true,
-      "value": "Payment simulator declined this test number. No charge was attempted."
+      "value": "The card number could not be authorized. Review the number or try another card."
     },
     {
       "test": "Guest checkout success state",
       "pass": true,
       "value": {
         "confirmed": true,
-        "order": "TC-PREVIEW-52388",
+        "order": "TC-ORDER-96898",
         "cart": "[]"
       }
     },

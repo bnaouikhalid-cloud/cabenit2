@@ -4,9 +4,11 @@
 
 - Target Vercel project: `cabenit01`
 - Target public production alias: `https://cabenit01.vercel.app/`
-- Final deployment: pending
+- Final customer-facing deployment: July 18, 2026
 - Local final Chromium run: 103 passed, 0 failed (`docs/qa-browser-results.json`)
-- Final public Chromium run and response-header verification: pending
+- Public production Chromium run: 103 passed, 0 failed (`docs/qa-live-results.json`)
+- All seven customer routes and the shared CSS/JavaScript returned HTTP 200; nested Product refresh passed
+- Public access required no Vercel login, and response headers returned `X-Robots-Tag: noindex, nofollow, noarchive`
 - `robots.txt`, page metadata and Vercel configuration keep the concept noindex
 
 This status applies only to the standalone Vercel prototype. The live WordPress/WooCommerce store was not deployed or modified.

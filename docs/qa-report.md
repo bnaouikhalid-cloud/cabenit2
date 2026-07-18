@@ -1,10 +1,10 @@
 # QA report
 
-Executed: July 18, 2026 using local Chromium against `http://127.0.0.1:4173/`. Final production execution is recorded after deployment.
+Executed: July 18, 2026 using isolated Chromium profiles against `http://127.0.0.1:4173/` and the public Vercel production alias.
 
 ## Result
 
-**Local: 103 passed · 0 failed. Public Vercel final: pending deployment.** Machine-readable evidence is in [`qa-browser-results.json`](qa-browser-results.json) and [`qa-live-results.json`](qa-live-results.json). The browser harness is [`../_cdp-test.cjs`](../_cdp-test.cjs).
+**Local: 103 passed · 0 failed. Public Vercel production: 103 passed · 0 failed.** Machine-readable evidence is in [`qa-browser-results.json`](qa-browser-results.json) and [`qa-live-results.json`](qa-live-results.json). The browser harness is [`../_cdp-test.cjs`](../_cdp-test.cjs).
 
 ## Executed coverage
 
@@ -47,6 +47,6 @@ Screenshot folder: [`screenshots/`](screenshots/).
 - Explicit labels, semantic landmarks, heading presence and non-color selection/error cues
 - 44px primary touch-target styling and reduced-motion media query
 
-## Limitations / production QA remaining
+## Access-dependent QA remaining
 
 The in-app browser plugin runtime could not initialize because its service returned missing sandbox-policy metadata; the project Chromium/CDP harness was used as the browser fallback. VoiceOver, NVDA, JAWS, TalkBack, physical iOS/Android devices and Safari were not available. Real WooCommerce sessions, gateway iframes, shipping/tax rules, CRM/email delivery, secure uploads, caching, analytics and production WordPress hosting still require staging tests with approved credentials.
