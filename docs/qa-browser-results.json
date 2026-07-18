@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-07-18T18:48:51.049Z",
+  "executedAt": "2026-07-18T21:05:07.000Z",
   "base": "http://127.0.0.1:4173",
   "results": [
     {
@@ -124,18 +124,23 @@
       "test": "home browser transfer profile",
       "pass": true,
       "value": {
-        "transferBytes": 335134,
-        "decodedBytes": 331534,
+        "transferBytes": 530662,
+        "decodedBytes": 524962,
         "largest": [
           {
             "asset": "/assets/css/styles.css",
-            "transferSize": 92326,
-            "decodedSize": 92026
+            "transferSize": 92828,
+            "decodedSize": 92528
           },
           {
             "asset": "/assets/images/brand/temima-logo.png",
             "transferSize": 55401,
             "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/images/generated/free-design/free-design-consultation-v2-800.webp",
+            "transferSize": 53878,
+            "decodedSize": 53578
           },
           {
             "asset": "/assets/fonts/source-serif-4-italic-latin.woff2",
@@ -144,13 +149,8 @@
           },
           {
             "asset": "/assets/js/script.js",
-            "transferSize": 42167,
-            "decodedSize": 41867
-          },
-          {
-            "asset": "/assets/images/lifestyle/kitchen-wide-800.webp",
-            "transferSize": 28370,
-            "decodedSize": 28070
+            "transferSize": 43597,
+            "decodedSize": 43297
           }
         ]
       }
@@ -266,13 +266,13 @@
       "test": "category browser transfer profile",
       "pass": true,
       "value": {
-        "transferBytes": 282534,
-        "decodedBytes": 278634,
+        "transferBytes": 309064,
+        "decodedBytes": 305164,
         "largest": [
           {
             "asset": "/assets/css/styles.css",
-            "transferSize": 92326,
-            "decodedSize": 92026
+            "transferSize": 92828,
+            "decodedSize": 92528
           },
           {
             "asset": "/assets/images/brand/temima-logo.png",
@@ -281,18 +281,18 @@
           },
           {
             "asset": "/assets/js/script.js",
-            "transferSize": 42167,
-            "decodedSize": 41867
-          },
-          {
-            "asset": "/assets/images/lifestyle/kitchen-detail-800.webp",
-            "transferSize": 26392,
-            "decodedSize": 26092
+            "transferSize": 43597,
+            "decodedSize": 43297
           },
           {
             "asset": "/assets/fonts/manrope-latin.woff2",
             "transferSize": 25136,
             "decodedSize": 24836
+          },
+          {
+            "asset": "/category/",
+            "transferSize": 24514,
+            "decodedSize": 24214
           }
         ]
       }
@@ -408,13 +408,13 @@
       "test": "product browser transfer profile",
       "pass": true,
       "value": {
-        "transferBytes": 329126,
-        "decodedBytes": 325826,
+        "transferBytes": 350612,
+        "decodedBytes": 346112,
         "largest": [
           {
             "asset": "/assets/css/styles.css",
-            "transferSize": 92326,
-            "decodedSize": 92026
+            "transferSize": 92828,
+            "decodedSize": 92528
           },
           {
             "asset": "/assets/images/brand/temima-logo.png",
@@ -428,13 +428,13 @@
           },
           {
             "asset": "/assets/js/script.js",
-            "transferSize": 42167,
-            "decodedSize": 41867
+            "transferSize": 43597,
+            "decodedSize": 43297
           },
           {
-            "asset": "/assets/images/lifestyle/kitchen-wide-800.webp",
-            "transferSize": 28370,
-            "decodedSize": 28070
+            "asset": "/assets/fonts/manrope-latin.woff2",
+            "transferSize": 25136,
+            "decodedSize": 24836
           }
         ]
       }
@@ -550,18 +550,23 @@
       "test": "free-quote browser transfer profile",
       "pass": true,
       "value": {
-        "transferBytes": 288764,
-        "decodedBytes": 286664,
+        "transferBytes": 343072,
+        "decodedBytes": 340972,
         "largest": [
           {
             "asset": "/assets/css/styles.css",
-            "transferSize": 92326,
-            "decodedSize": 92026
+            "transferSize": 92828,
+            "decodedSize": 92528
           },
           {
             "asset": "/assets/images/brand/temima-logo.png",
             "transferSize": 55401,
             "decodedSize": 55101
+          },
+          {
+            "asset": "/assets/images/generated/free-design/free-design-consultation-v2-800.webp",
+            "transferSize": 53878,
+            "decodedSize": 53578
           },
           {
             "asset": "/assets/fonts/source-serif-4-italic-latin.woff2",
@@ -570,13 +575,8 @@
           },
           {
             "asset": "/assets/js/script.js",
-            "transferSize": 42167,
-            "decodedSize": 41867
-          },
-          {
-            "asset": "/assets/fonts/manrope-latin.woff2",
-            "transferSize": 25136,
-            "decodedSize": 24836
+            "transferSize": 43597,
+            "decodedSize": 43297
           }
         ]
       }
@@ -692,13 +692,13 @@
       "test": "cart browser transfer profile",
       "pass": true,
       "value": {
-        "transferBytes": 233037,
-        "decodedBytes": 230637,
+        "transferBytes": 248514,
+        "decodedBytes": 246114,
         "largest": [
           {
             "asset": "/assets/css/styles.css",
-            "transferSize": 92326,
-            "decodedSize": 92026
+            "transferSize": 92828,
+            "decodedSize": 92528
           },
           {
             "asset": "/assets/images/brand/temima-logo.png",
@@ -707,8 +707,8 @@
           },
           {
             "asset": "/assets/js/script.js",
-            "transferSize": 42167,
-            "decodedSize": 41867
+            "transferSize": 43597,
+            "decodedSize": 43297
           },
           {
             "asset": "/assets/fonts/manrope-latin.woff2",
@@ -717,8 +717,8 @@
           },
           {
             "asset": "/cart/",
-            "transferSize": 11657,
-            "decodedSize": 11357
+            "transferSize": 12378,
+            "decodedSize": 12078
           }
         ]
       }
@@ -834,13 +834,13 @@
       "test": "checkout browser transfer profile",
       "pass": true,
       "value": {
-        "transferBytes": 227975,
-        "decodedBytes": 226175,
+        "transferBytes": 233315,
+        "decodedBytes": 231515,
         "largest": [
           {
             "asset": "/assets/css/styles.css",
-            "transferSize": 92326,
-            "decodedSize": 92026
+            "transferSize": 92828,
+            "decodedSize": 92528
           },
           {
             "asset": "/assets/images/brand/temima-logo.png",
@@ -849,8 +849,8 @@
           },
           {
             "asset": "/assets/js/script.js",
-            "transferSize": 42167,
-            "decodedSize": 41867
+            "transferSize": 43597,
+            "decodedSize": 43297
           },
           {
             "asset": "/assets/fonts/manrope-latin.woff2",
@@ -859,8 +859,8 @@
           },
           {
             "asset": "/checkout/",
-            "transferSize": 11065,
-            "decodedSize": 10765
+            "transferSize": 11135,
+            "decodedSize": 10835
           }
         ]
       }
@@ -976,13 +976,13 @@
       "test": "resources browser transfer profile",
       "pass": true,
       "value": {
-        "transferBytes": 280758,
-        "decodedBytes": 278958,
+        "transferBytes": 282782,
+        "decodedBytes": 280982,
         "largest": [
           {
             "asset": "/assets/css/styles.css",
-            "transferSize": 92326,
-            "decodedSize": 92026
+            "transferSize": 92828,
+            "decodedSize": 92528
           },
           {
             "asset": "/assets/images/brand/temima-logo.png",
@@ -996,8 +996,8 @@
           },
           {
             "asset": "/assets/js/script.js",
-            "transferSize": 42167,
-            "decodedSize": 41867
+            "transferSize": 43597,
+            "decodedSize": 43297
           },
           {
             "asset": "/assets/fonts/manrope-latin.woff2",
@@ -1159,7 +1159,7 @@
         "saved": true,
         "fileReady": true,
         "success": true,
-        "id": "TC-DESIGN-528794"
+        "id": "TC-DESIGN-704838"
       }
     },
     {
@@ -1189,7 +1189,7 @@
       "pass": true,
       "value": {
         "confirmed": true,
-        "order": "TC-ORDER-30753",
+        "order": "TC-ORDER-06725",
         "cart": "[]"
       }
     },

@@ -1,6 +1,6 @@
 # GPT Image 2 production prompt pack
 
-Status: **generation pending**. On July 18, 2026, `OPENAI_API_KEY` was not configured in the working environment. No API request was made, no generated asset is claimed, and the live site continues to use the documented client-public and licensed imagery in `docs/asset-register.md`.
+Status: **approved set generated and integrated on July 18, 2026** with the built-in OpenAI GPT Image 2 workflow. Versioned production WebP derivatives are recorded in `docs/asset-register.md`. The prompts below remain the production brief and regeneration reference; the isolated product-card set was added during implementation to satisfy the final ecommerce priority.
 
 This pack is ready for the bundled OpenAI image CLI with model `gpt-image-2`. Generate two independent candidates for every prompt at `quality=high`; never approve candidate 1 automatically. Keep the PNG output as the master, inspect at 100% zoom, select the strongest candidate, then derive WebP and AVIF files. Do not expose credentials in commands, source files, logs, browser code or Git history.
 

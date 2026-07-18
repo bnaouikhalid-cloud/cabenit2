@@ -4,7 +4,20 @@ All runtime assets are stored locally. No image is hotlinked. “Client public m
 
 ## GPT Image 2 asset status
 
-The requested generated collection was not created on July 18, 2026 because `OPENAI_API_KEY` was not configured in the working environment. No generated-image ownership, quality or integration claim is made. The production-ready prompt set, two-candidate review gate, responsive crop plan, filenames and integration map are in [`gpt-image-2-prompts.md`](gpt-image-2-prompts.md). Reserved local folders exist under `assets/images/generated/`; they contain no customer-facing generated imagery.
+The coordinated collection was generated on July 18, 2026 with the built-in OpenAI GPT Image 2 workflow, manually inspected, exported to versioned WebP files and integrated into the customer-facing site. The approved set uses a shared warm-neutral White Shaker direction, satin-brass hardware and commercial studio/interior lighting. A consultation candidate with text-like book-spine marks was rejected and replaced with a clean targeted edit before export.
+
+Generated imagery is representative brand/editorial material. Product names, dimensions, prices and specifications remain HTML content and must be verified independently before ordering.
+
+| Asset family | Runtime files | Page usage | Optimization |
+|---|---|---|---|
+| White Shaker product set | `generated/products/white-shaker-*-v2-600.webp`, `*-1024.webp` | Home priority cards, category catalogue, search, Quick View, cart and Product related cards | Square WebP, 600 and 1024 px, quality 86, 4:4:4 chroma |
+| Open wall cabinet | `generated/products/white-shaker-wall-cabinet-open-v2-{320,800,1400}.webp` | Product gallery and Home construction/inspiration | 4:3 WebP, thumbnail plus responsive detail sizes |
+| Home hero | `generated/home-hero/home-hero-white-shaker-v2-{800,1600}.webp` | Home hero and inspiration | 16:9 WebP, responsive preload/srcset |
+| Category cabinet run | `generated/category/category-white-shaker-run-v2-{800,1600}.webp` | Category hero and Home inspiration | 16:9 WebP, responsive srcset |
+| Free Design consultation | `generated/free-design/free-design-consultation-v2-{800,1500}.webp` | Home design section and Free Design hero | 16:10 WebP, responsive srcset |
+| Construction details | `generated/construction/*-v2-{320,800,1400}.webp` | Home quality tabs and Product gallery | 4:3 WebP, tab/detail and thumbnail sizes |
+| Product context | `generated/product-context/white-shaker-product-context-v2-{320,800,1500}.webp` | Product gallery and Home inspiration | 3:2 WebP, thumbnail plus responsive sizes |
+| Green-accent inspiration | `generated/inspiration/kitchen-inspiration-green-v2-{800,1500}.webp` | Home inspiration editorial | 3:2 WebP, responsive srcset |
 
 | Filename | Source | Ownership / licence | Page usage | Optimization |
 |---|---|---|---|---|
@@ -46,9 +59,9 @@ The requested generated collection was not created on July 18, 2026 because `OPE
 
 ## Production actions
 
-- Generate and manually approve the coordinated GPT Image 2 collection using [`gpt-image-2-prompts.md`](gpt-image-2-prompts.md); do not replace exact product/SKU imagery with generated substitutes.
+- Retain the versioned generated filenames because `/assets/` is served with immutable caching.
+- Treat generated product imagery as representative until cabinet geometry, finish and included hardware are confirmed against supplier masters.
 - Obtain original official logo/favicon and client product-photo masters.
 - Confirm Pexels/Unsplash selections with the client; retain source attribution in project records.
-- Generate AVIF plus WebP responsive derivatives during WordPress media processing.
-- Do not upscale the very compressed transparent product packshots; use them at their intended card/gallery scale or replace with masters.
+- Add AVIF derivatives during a future CMS/WordPress media migration if its pipeline supports art-directed sources.
 - Delete unused legacy SVGs only after design approval and migration reference checks.

@@ -11,14 +11,14 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
   const searchProducts = [
-    { name: 'White Shaker 18″ Wall Cabinet', type: 'Wall cabinet', detail: '18″ wide · 3 heights', price: 174.32, image: 'cabinet-wall-600.webp' },
-    { name: 'White Shaker 24″ Wall Cabinet', type: 'Wall cabinet', detail: '24″ wide · 3 heights', price: 234.67, image: 'cabinet-wall-24-600.webp' },
-    { name: 'White Shaker 24″–27″ Base Cabinet', type: 'Base cabinet', detail: '24″ or 27″ wide', price: 333.75, image: 'cabinet-base-600.webp' },
-    { name: 'White Shaker Three Drawer Cabinet', type: 'Drawer base', detail: '12″–36″ wide', price: 343.44, image: 'cabinet-drawer-600.webp' },
-    { name: 'White Shaker 18″ Pantry / Utility Cabinet', type: 'Tall cabinet', detail: '18″ wide', price: 650.37, image: 'cabinet-pantry-600.webp' },
-    { name: 'White Shaker 24″ Pantry / Utility Cabinet', type: 'Tall cabinet', detail: '24″ wide', price: 671.97, image: 'cabinet-pantry-600.webp' },
-    { name: 'White Shaker 30″–36″ Sink Base', type: 'Sink base', detail: '30″–36″ wide', price: 312.89, image: 'cabinet-sink-600.webp' },
-    { name: 'White Shaker Sample Door', type: 'Sample', detail: 'Finish and door profile', price: 21.99, image: 'sample-door-600.webp' }
+    { name: 'White Shaker 18″ Wall Cabinet', type: 'Wall cabinet', detail: '18″ wide · 3 heights', price: 174.32, image: 'assets/images/generated/products/white-shaker-wall-cabinet-v2-600.webp' },
+    { name: 'White Shaker 24″ Wall Cabinet', type: 'Wall cabinet', detail: '24″ wide · 3 heights', price: 234.67, image: 'assets/images/generated/products/white-shaker-wall-24-cabinet-v2-600.webp' },
+    { name: 'White Shaker 24″–27″ Base Cabinet', type: 'Base cabinet', detail: '24″ or 27″ wide', price: 333.75, image: 'assets/images/generated/products/white-shaker-base-cabinet-v2-600.webp' },
+    { name: 'White Shaker Three Drawer Cabinet', type: 'Drawer base', detail: '12″–36″ wide', price: 343.44, image: 'assets/images/generated/products/white-shaker-drawer-base-v2-600.webp' },
+    { name: 'White Shaker 18″ Pantry / Utility Cabinet', type: 'Tall cabinet', detail: '18″ wide', price: 650.37, image: 'assets/images/generated/products/white-shaker-pantry-cabinet-v2-600.webp' },
+    { name: 'White Shaker 24″ Pantry / Utility Cabinet', type: 'Tall cabinet', detail: '24″ wide', price: 671.97, image: 'assets/images/generated/products/white-shaker-pantry-cabinet-v2-600.webp' },
+    { name: 'White Shaker 30″–36″ Sink Base', type: 'Sink base', detail: '30″–36″ wide', price: 312.89, image: 'assets/images/generated/products/white-shaker-sink-base-v2-600.webp' },
+    { name: 'White Shaker Sample Door', type: 'Sample', detail: 'Finish and door profile', price: 21.99, image: 'assets/images/generated/products/white-shaker-sample-door-v2-600.webp' }
   ];
 
   let removedItem = null;
@@ -190,7 +190,7 @@
         results.innerHTML = '<div class="search-empty"><strong>No matching cabinets</strong><span>Try a cabinet type, width or “White Shaker”.</span><a href="' + root + 'category/">Browse all cabinets</a></div>';
         return;
       }
-      results.innerHTML = matches.map((product, index) => `<a id="search-option-${index}" class="search-result" href="${root}product/" role="option" aria-selected="false" data-search-option><img src="${root}assets/images/products/${product.image}" alt="" width="72" height="72"><span><small>${escapeHtml(product.type)}</small><strong>${escapeHtml(product.name)}</strong><em>${escapeHtml(product.detail)} · From ${money(product.price)}</em></span><b aria-hidden="true">→</b></a>`).join('');
+      results.innerHTML = matches.map((product, index) => `<a id="search-option-${index}" class="search-result" href="${root}product/" role="option" aria-selected="false" data-search-option><img src="${root}${product.image}" alt="" width="72" height="72"><span><small>${escapeHtml(product.type)}</small><strong>${escapeHtml(product.name)}</strong><em>${escapeHtml(product.detail)} · From ${money(product.price)}</em></span><b aria-hidden="true">→</b></a>`).join('');
     };
 
     const selectIndex = next => {
@@ -233,6 +233,8 @@
   function initQualityTabs() {
     const tabs = $$('[data-quality-tab]');
     if (!tabs.length) return;
+    const detailImage = $('[data-quality-image-target]');
+    const detailCaption = $('[data-quality-caption-target]');
     const selectTab = tab => {
       tabs.forEach(candidate => candidate.setAttribute('aria-selected', String(candidate === tab)));
       $$('[data-quality-panel]').forEach(panel => {
@@ -240,6 +242,15 @@
         panel.hidden = !active;
         panel.classList.toggle('is-active', active);
       });
+      if (detailImage && tab.dataset.qualityImage) {
+        detailImage.src = tab.dataset.qualityImage;
+        if (tab.dataset.qualitySrcset) detailImage.srcset = tab.dataset.qualitySrcset;
+        else detailImage.removeAttribute('srcset');
+        if (tab.dataset.qualitySizes) detailImage.sizes = tab.dataset.qualitySizes;
+        else detailImage.removeAttribute('sizes');
+        detailImage.alt = tab.dataset.qualityAlt || '';
+      }
+      if (detailCaption && 'qualityCaption' in tab.dataset) detailCaption.textContent = tab.dataset.qualityCaption;
       tab.focus();
     };
     tabs.forEach((tab, index) => {
@@ -260,7 +271,7 @@
       const card = button.closest('[data-product-card]');
       const name = card?.dataset.name || 'Cabinet';
       const price = card?.dataset.price || 0;
-      const image = card?.dataset.image || `${root}assets/images/products/cabinet-wall-600.webp`;
+      const image = card?.dataset.image || `${root}assets/images/generated/products/white-shaker-wall-cabinet-v2-600.webp`;
       $('[data-quick-name]', modal).textContent = name;
       $('[data-quick-price]', modal).textContent = `From ${money(price)}`;
       $('[data-quick-image]', modal).src = image;
@@ -414,7 +425,7 @@
       const cart = getCart();
       const existing = cart.find(item => item.id === selected.dataset.sku);
       if (existing) existing.qty += qty;
-      else cart.push({ id: selected.dataset.sku, name: 'White Shaker 18″ Wall Cabinet', type: 'Wall cabinet', variation: selected.dataset.dimensions, price: Number(selected.dataset.price), sku: selected.dataset.sku, qty, image: 'assets/images/products/cabinet-wall-600.webp' });
+      else cart.push({ id: selected.dataset.sku, name: 'White Shaker 18″ Wall Cabinet', type: 'Wall cabinet', variation: selected.dataset.dimensions, price: Number(selected.dataset.price), sku: selected.dataset.sku, qty, image: 'assets/images/generated/products/white-shaker-wall-cabinet-v2-600.webp' });
       setCart(cart);
       showToast(`${qty} × ${selected.dataset.dimensions} added to cart.`);
     };
@@ -429,9 +440,13 @@
     $$('[data-gallery-thumb]').forEach(button => button.addEventListener('click', () => {
       $$('[data-gallery-thumb], [data-gallery-diagram]').forEach(thumb => thumb.setAttribute('aria-current', 'false'));
       button.setAttribute('aria-current', 'true');
+      if (button.dataset.gallerySrcset) mainImage.srcset = button.dataset.gallerySrcset;
+      else mainImage.removeAttribute('srcset');
+      if (button.dataset.gallerySizes) mainImage.sizes = button.dataset.gallerySizes;
+      else mainImage.removeAttribute('sizes');
       mainImage.src = button.dataset.galleryThumb;
-      mainImage.removeAttribute('srcset');
       mainImage.alt = button.dataset.galleryAlt;
+      mainImage.classList.toggle('is-cover', button.dataset.galleryFit === 'cover');
     }));
     $('[data-gallery-diagram]')?.addEventListener('click', event => {
       $$('[data-gallery-thumb], [data-gallery-diagram]').forEach(thumb => thumb.setAttribute('aria-current', 'false'));
@@ -441,7 +456,7 @@
     });
     const galleryModal = $('[data-gallery-modal]');
     $('[data-gallery-zoom]')?.addEventListener('click', () => {
-      $('[data-gallery-modal-image]').src = mainImage.src;
+      $('[data-gallery-modal-image]').src = mainImage.currentSrc || mainImage.src;
       $('[data-gallery-modal-image]').alt = mainImage.alt;
       openOverlay(galleryModal, $('[data-gallery-close]'));
     });

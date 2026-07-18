@@ -57,6 +57,7 @@ async function run() {
     await send('Page.navigate', { url: base + route });
     await sleep(550);
     await evaluate(`document.fonts?.ready.then(()=>true)`);
+    await evaluate(`(async()=>{const images=[...document.images];images.forEach(image=>{image.loading='eager'});await new Promise(r=>setTimeout(r,50));const step=Math.max(500,innerHeight-100);for(let y=0;y<document.documentElement.scrollHeight;y+=step){scrollTo(0,y);await new Promise(r=>setTimeout(r,20))}scrollTo(0,0);await Promise.all(images.map(image=>image.complete?Promise.resolve():new Promise(resolve=>{image.addEventListener('load',resolve,{once:true});image.addEventListener('error',resolve,{once:true});setTimeout(resolve,3000)})));await Promise.all(images.filter(image=>image.complete&&image.naturalWidth).map(image=>image.decode?.().catch(()=>{})));await new Promise(r=>setTimeout(r,50));return true})()`);
   };
   const shot = async name => {
     const metrics = await send('Page.getLayoutMetrics');
@@ -82,13 +83,13 @@ async function run() {
   record('Optional review mode notice and dismiss', reviewMode.visible && reviewMode.dismissed, reviewMode);
   for (const [route, label] of routes) {
     if (label === 'cart') {
-      await evaluate(`localStorage.setItem('temimaCart', JSON.stringify([{id:'TMM_W_W1830',name:'White Shaker 18″ Wall Cabinet',type:'Wall cabinet',variation:'18″ W × 30″ H × 12″ D',price:174.32,sku:'TMM_W_W1830',qty:2,image:'assets/images/products/cabinet-wall-600.webp'}])); true`);
+      await evaluate(`localStorage.setItem('temimaCart', JSON.stringify([{id:'TMM_W_W1830',name:'White Shaker 18″ Wall Cabinet',type:'Wall cabinet',variation:'18″ W × 30″ H × 12″ D',price:174.32,sku:'TMM_W_W1830',qty:2,image:'assets/images/generated/products/white-shaker-wall-cabinet-v2-600.webp'}])); true`);
     }
     for (const width of widths) {
       const mobile = width <= 430;
       const height = mobile ? 844 : width <= 768 ? 1024 : 900;
       await navigate(route, width, height, mobile);
-      const measure = await evaluate(`({innerWidth,scrollWidth:document.documentElement.scrollWidth,title:document.title,h1:document.querySelector('h1')?.textContent.trim(),images:[...document.images].filter(i=>i.complete&&!i.naturalWidth).map(i=>i.currentSrc||i.src)})`);
+      const measure = await evaluate(`({innerWidth,scrollWidth:document.documentElement.scrollWidth,title:document.title,h1:document.querySelector('h1')?.textContent.trim(),images:[...document.images].filter(i=>!i.complete||!i.naturalWidth).map(i=>i.currentSrc||i.src)})`);
       record(`${label} responsive ${width}px`, measure.innerWidth === width && measure.scrollWidth <= width && Boolean(measure.h1) && measure.images.length === 0, measure);
     }
     await navigate(route, 1440, 900);
