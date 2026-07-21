@@ -147,6 +147,7 @@
       body.classList.add('nav-open');
       $('a', mobileNav)?.focus();
     });
+    $('[data-menu-close]')?.addEventListener('click', () => closeMobileNav());
     $$('[data-mobile-nav] a').forEach(link => link.addEventListener('click', () => closeMobileNav(false)));
 
     initSearch();
